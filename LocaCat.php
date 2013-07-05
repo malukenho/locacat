@@ -61,7 +61,7 @@ class Phergie_Plugin_LocaCat extends Phergie_Plugin_Abstract
             return true;
         }
 
-        $this->getCommand($command, $params);    
+        $this->getCommand($command, $params);	
 
        return true;
     }
@@ -79,7 +79,9 @@ class Phergie_Plugin_LocaCat extends Phergie_Plugin_Abstract
     	
     	$listOfCategories = $this->categories();
 
-    	$this->doNotice($nick, $listOfCategories[$params]);
+    	$max = count($listOfCategories[$params]);
+
+    	$this->doNotice($nick, $listOfCategories[$params][rand(0, ($max - 1))]);
     }
 
     /**
