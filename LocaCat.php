@@ -66,7 +66,15 @@ class Phergie_Plugin_LocaCat extends Phergie_Plugin_Abstract
        return true;
     }
     
-    //@TODO: Rename this method :S
+    /**
+     * getValue
+     * 
+     * @param mixed $params pass a list of Params to the method.
+     *
+     * @access private
+     *
+     * @return mixed Value.
+     */
     private function getValue($params)
     {
     	$nick = $this->event->getNick();
@@ -121,6 +129,16 @@ class Phergie_Plugin_LocaCat extends Phergie_Plugin_Abstract
 	    );
     }
 
+    /**
+     * getCommand
+     * 
+     * @param mixed $command.
+     * @param mixed $params.
+     * 
+     * @access private
+     *
+     * @return mixed Value.
+     */
     private function getCommand($command, $params)
     {
     	switch($command)
